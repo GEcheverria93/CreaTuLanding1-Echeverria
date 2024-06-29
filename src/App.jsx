@@ -6,8 +6,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <h1>Hola</h1>
-      <ItemListContainer />
+      <h1>FLUXO</h1>
+      <ItemListContainer productListTitle={'Lista de Productos'} />
     </>
   );
 }
