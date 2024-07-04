@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <h1>FLUXO</h1>
+      <h1></h1>
       <ItemListContainer productListTitle={'Lista de Productos'} />
     </>
   );
