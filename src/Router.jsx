@@ -4,11 +4,14 @@ import App from './App';
 import NavBar from './components/NavBar';
 
 const Router = () => {
-  <BrowserRouter>
-    <NavBar />
-    <Routes>
-      <Route path="/shop" element={App} />
-    </Routes>
-  </BrowserRouter>;
+  return (
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/shop" element={App} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
+
 export default Router;
