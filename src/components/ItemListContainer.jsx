@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 
 import { productsData } from '../data/products';
+import useCartStore from '../store/useCartStore';
 
 const ItemListContainer = ({ productListTitle }) => {
   const [products, setProducts] = useState([]);
-  console.log(productListTitle);
+  const { addToCart } = useCartStore();
+
   useEffect(() => {
     // Simula la carga de datos de productos
     setProducts(productsData);
@@ -12,16 +14,17 @@ const ItemListContainer = ({ productListTitle }) => {
 
   const checkProductStock = (productId) => {
     // Implementa la lógica para verificar el stock del producto
-    return true; // Retorna true o false según el stock
+    const product = products.find((product) => product.id === productId);
+    return product && product.stock > 0; // Retorna true o false según el stock
   };
 
-  const setupProductsEvents = () => {
-    // Implementa la lógica para configurar los eventos de los productos
+  const handleAddToCart = (product) => {
+    if (checkProductStock(product.id)) {
+      addToCart(product.id, product);
+    } else {
+      alert('Producto sin stock');
+    }
   };
-
-  useEffect(() => {
-    setupProductsEvents();
-  }, [products]);
 
   return (
     <>
@@ -37,7 +40,7 @@ const ItemListContainer = ({ productListTitle }) => {
             <button
               className="add-to-cart-btn"
               disabled={!checkProductStock(product.id)}
-              data-product-id={product.id}
+              onClick={() => handleAddToCart(product)}
             >
               Añadir al carrito
             </button>

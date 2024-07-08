@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import BurguerButton from './BurguerButon';
+import BurgerButton from './BurgerButon';
 
 function NavBar() {
   const [clicked, setClicked] = useState(false);
@@ -15,11 +16,11 @@ function NavBar() {
       <NavContainer>
         <h2>FLUXO ECOMMERCE</h2>
         <div className={`links ${clicked ? 'active' : ' '}`}>
-          <a href="">Shop</a>
-          <a href="">Cart</a>
+          <Link to="/shop">Shop</Link>
+          <Link to="/cart">Cart</Link>
         </div>
-        <div className="burguer">
-          <BurguerButton clicked={clicked} handleClick={handleClick} />
+        <div className="burger">
+          <BurgerButton clicked={clicked} handleClick={handleClick} />
         </div>
         <BgDiv className={`initial ${clicked ? ' active' : ''}`}></BgDiv>
       </NavContainer>
@@ -88,7 +89,7 @@ const NavContainer = styled.nav`
     }
   }
 
-  .burguer {
+  .burger {
     @media (min-width: 768px) {
       display: none;
     }

@@ -1,23 +1,6 @@
 import styled from 'styled-components';
 
-function BurguerButton(props) {
-  return (
-    <Burguer>
-      <div
-        onClick={props.handleClick}
-        className={`icon nav-icon-5 ${props.clicked ? 'open' : ''}`}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </Burguer>
-  );
-}
-
-export default BurguerButton;
-
-const Burguer = styled.div`
+export const Burger = styled.div`
     .nav-icon-5{
   width: 35px;
   height: 30px;
