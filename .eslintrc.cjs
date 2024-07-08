@@ -29,41 +29,41 @@ module.exports = {
   },
   plugins: ['react-refresh'],
   rules: {
-    "react/prop-types": "off",
+    'react/prop-types': 'off',
     'react/jsx-no-target-blank': 'off',
     'react/react-in-jsx-scope': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
-    'semi': ['error', 'always'],
+    semi: ['error', 'always'],
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
       },
     ],
-    "import/order": [
-      "warn",
+    'import/order': [
+      'warn',
       {
-        groups: ["builtin", "external", ["sibling", "parent"], "index"],
+        groups: ['builtin', 'external', ['sibling', 'parent'], 'index'],
         pathGroups: [
           {
-            pattern: "$app/**",
-            group: "external"
+            pattern: '$app/**',
+            group: 'external',
           },
           {
-            pattern: "~/**",
-            group: "sibling"
-          }
+            pattern: '~/**',
+            group: 'sibling',
+          },
         ],
         alphabetize: {
-          order: "asc",
-          caseInsensitive: true
+          order: 'asc',
+          caseInsensitive: true,
         },
-        "newlines-between": "always"
-      }
-    ]
+        'newlines-between': 'always',
+      },
+    ],
   },
   settings: {
     react: { version: '18.2' },

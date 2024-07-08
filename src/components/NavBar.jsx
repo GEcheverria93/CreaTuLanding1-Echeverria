@@ -2,7 +2,6 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import BurguerButton from './BurguerButon';
-import CartWidget from './CartWidget';
 
 function NavBar() {
   const [clicked, setClicked] = useState(false);
