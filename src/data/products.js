@@ -5,6 +5,7 @@ export const productsData = [
     price: 1763236,
     stock: 5,
     image: 'product1.webp',
+    category_id: 1,
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const productsData = [
     price: 1775648,
     stock: 5,
     image: 'product1.webp',
+    category_id: 1,
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const productsData = [
     price: 1833569,
     stock: 5,
     image: 'product1.webp',
+    category_id: 1,
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const productsData = [
     price: 1952423,
     stock: 5,
     image: 'product1.webp',
+    category_id: 1,
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ export const productsData = [
     price: 3672260,
     stock: 5,
     image: 'product1.webp',
+    category_id: 1,
   },
   {
     id: 6,
@@ -40,6 +45,7 @@ export const productsData = [
     price: 1295750,
     stock: 5,
     image: 'product2.jpg',
+    category_id: 2,
   },
   {
     id: 7,
@@ -47,6 +53,7 @@ export const productsData = [
     price: 1199990,
     stock: 5,
     image: 'product2.jpg',
+    category_id: 2,
   },
   {
     id: 8,
@@ -54,6 +61,7 @@ export const productsData = [
     price: 1169850,
     stock: 5,
     image: 'product2.jpg',
+    category_id: 2,
   },
   {
     id: 9,
@@ -61,6 +69,7 @@ export const productsData = [
     price: 1144990,
     stock: 5,
     image: 'product2.jpg',
+    category_id: 2,
   },
   {
     id: 10,
@@ -68,5 +77,6 @@ export const productsData = [
     price: 1134990,
     stock: 5,
     image: 'product2.jpg',
+    category_id: 2,
   },
 ];

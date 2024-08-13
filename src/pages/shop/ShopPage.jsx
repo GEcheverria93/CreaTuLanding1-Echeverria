@@ -1,7 +1,7 @@
-import ItemListContainer from '../../components/ItemListContainer';
+import { ItemListContainer } from '../../containers/index';
 import './ShopStyle.css';
 
 const ShopPage = () => {
-  return <ItemListContainer productListTitle={'Lista de productos'} />;
+  return <ItemListContainer />;
 };
 export default ShopPage;
