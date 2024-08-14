@@ -7,18 +7,18 @@ import { productsData } from '../data/products';
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
-  const { categoryId } = useParams();
+  const { category } = useParams();
 
   useEffect(() => {
     const filteredProducts = productsData.filter(
-      (product) => product.category_id === parseInt(categoryId, 10)
+      (product) => product.category === category
     );
     setProducts(filteredProducts);
-  }, [categoryId]);
+  }, [category]);
 
   useEffect(() => {
-    if (!categoryId) setProducts(productsData);
-  }, [categoryId]);
+    if (!category) setProducts(productsData);
+  }, [category]);
 
   return (
     <>
