@@ -1,0 +1,7 @@
+.item-page-container {
+  margin: 30px;
+}
+
+.product-category-name {
+  text-transform: capitalize;
+}

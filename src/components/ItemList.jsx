@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 import useCartStore from '../store/useCartStore';
 
 function ItemList({ product }) {
   const { addToCart } = useCartStore();
+  const navigate = useNavigate();
 
   const checkProductStock = () => {
     // Implementa la lógica para verificar el stock del producto
@@ -16,8 +19,14 @@ function ItemList({ product }) {
     }
   };
 
+  const goToItem = (e, id) => {
+    if (e.target.className !== 'add-to-cart-btn') {
+      navigate(`/item/${id}`);
+    }
+  };
+
   return (
-    <article className="product">
+    <article className="product" onClick={(e) => goToItem(e, product.id)}>
       <div>
         <img src={`/images/${product.image}`} alt={product.name} />
         <span className="product-title">{product.name}</span>

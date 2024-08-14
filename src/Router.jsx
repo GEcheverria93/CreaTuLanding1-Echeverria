@@ -1,9 +1,10 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import { NavBar } from './components/index';
-import { ItemDetailsContainer, ItemListContainer } from './containers/index';
+import { ItemListContainer } from './containers/index';
 import { ShopPage, CartPage } from './pages/index';
 import './index.css';
+import ItemPage from './pages/item/itemPage';
 
 const Router = () => {
   return (
@@ -14,7 +15,7 @@ const Router = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/*" element={<Navigate to="/shop" />} />
         <Route path="/category/:category" element={<ItemListContainer />} />
-        <Route path="/item/:itemId" element={<ItemDetailsContainer />} />
+        <Route path="/item/:itemId" element={<ItemPage />} />
       </Routes>
     </BrowserRouter>
   );
