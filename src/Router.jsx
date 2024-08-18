@@ -12,9 +12,9 @@ const Router = () => {
       <Routes>
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/*" element={<NotFoundPage />} />
         <Route path="/category/:category" element={<ItemListContainer />} />
         <Route path="/item/:itemId" element={<ItemPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
