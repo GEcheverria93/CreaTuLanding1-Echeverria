@@ -19,7 +19,7 @@ export const productsData = [
     id: 3,
     name: 'PC Armada Gamer Extreme I5 13400F /Cooler /RTX 4070 Super /B760M /16GB /500GB /Gabinete /Fuente 750W 80P',
     price: 1833569,
-    stock: 5,
+    stock: 0,
     image: 'product1.webp',
     category: 'desktop',
   },

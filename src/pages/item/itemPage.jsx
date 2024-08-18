@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { ItemDetailsContainer } from '../../containers';
-
 import './itemStyle.css';
-
 import { productsData } from '../../data/products';
 
 const ItemPage = () => {
